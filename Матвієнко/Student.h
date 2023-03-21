@@ -20,6 +20,11 @@ public:
 	int getAge();
 
 	friend void print(Student s);
+
+	void info()
+	{
+
+	}
 };
 
 
