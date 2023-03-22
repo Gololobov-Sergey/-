@@ -7,15 +7,81 @@
 
 using namespace std;
 
+void func(int& a)
+{
+    a++;
+}
+
+
+
 int main()
 {
     SetConsoleOutputCP(1251);
 
-    Student st("Petro", 20);
+    /*Student st("Petro", 20);
     st.setAge(2000);
     print(st);
 
-    cout << "Вік : " << st.getAge() << endl;
+    cout << "Вік : " << st.getAge() << endl;*/
+
+
+    //int a[300000];
+
+
+    /*int a = 9;
+
+    cout << a << endl;
+    cout << sizeof(a) << endl;
+    cout << typeid(a).name() << endl;
+    cout << &a << endl;
+
+    int* ptr = &a;
+
+    cout << ptr << endl;
+    cout << *ptr << endl;
+    *ptr = 55;*/
+
+
+    /*double a[5] = { 3,67,7,4,2 };
+
+    cout << *a << endl;
+
+    cout << *a << endl;
+    cout << *(a+1) << " "  << a[1] << endl;
+
+    for (size_t i = 0; i < 5; i++)
+    {
+        cout << *(a + i) << " ";
+    }
+    cout << endl;
+
+    int n;
+    cin >> n;
+    int* p = new int[n];
+    
+    delete[] p;*/
+
+
+
+    /*int a = 5;      int b = 4;
+    int* pa = &a;   int& rb = b;
+    *pa = 200;      rb = 200;*/
+
+
+    /*int a = 5;
+    func(a);
+    cout << a << endl;*/
+
+
+
+    const int a = 5;
+
+    int b1 = 5;
+    int b2(5);
+    int b3{ 5 };
+
+
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

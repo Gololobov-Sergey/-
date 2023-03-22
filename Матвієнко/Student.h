@@ -6,14 +6,17 @@ using namespace std;
 
 class Student
 {
+	const int id;
 	string name;
 	int age;
+
+	static int count;
 
 public:
 
 	Student();
 
-	Student(string name, int age);
+	Student(int id, string name, int age);
 
 	void setAge(int age);
 
@@ -25,7 +28,15 @@ public:
 	{
 
 	}
+
+	int getCount()
+	{
+		return count;
+	}
 };
+
+
+
 
 
 inline int Student::getAge()

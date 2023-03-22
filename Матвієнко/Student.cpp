@@ -1,12 +1,15 @@
 #include "Student.h"
 
-Student::Student()
+
+int Student::count = 0;
+
+Student::Student() : id(0)
 {
 	name = "";
 	age = 0;
 }
 
-Student::Student(string name, int age)
+Student::Student(int id, string name, int age) : id(id)
 {
 	this->name = name;
 	this->age = age;
