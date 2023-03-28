@@ -10,6 +10,8 @@ class Student
 	string name;
 	int age;
 
+	int* mark;
+
 	static int count;
 
 public:
@@ -17,6 +19,11 @@ public:
 	Student();
 
 	Student(int id, string name, int age);
+
+	~Student()
+	{
+		delete[] mark;
+	}
 
 	void setAge(int age);
 
@@ -29,7 +36,7 @@ public:
 
 	}
 
-	int getCount()
+	static int getCount()
 	{
 		return count;
 	}

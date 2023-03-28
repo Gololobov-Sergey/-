@@ -4,6 +4,8 @@
 #include <iostream>
 #include <Windows.h>
 #include "Student.h"
+#include "Fraction.h"
+#include "Human.h"
 
 using namespace std;
 
@@ -17,6 +19,44 @@ void func(int& a)
 int main()
 {
     SetConsoleOutputCP(1251);
+
+    //////// 28.03.2023 ////////
+
+
+    Human h("Nick", 30);
+    h.print();
+
+    FootballPlayer f("Zidan", 40);
+    f.print();
+
+
+
+
+    // .  ::   ?:  sizeof()  
+
+
+    // ++, --, -, +
+    // +, -, /, *, % , = , +=, .....
+
+    // ! 
+    // ==, < , > , !=, ....
+
+    // [], << , >> 
+
+
+
+
+    //Fraction f1(2, 5);
+    //f1.print();
+    //Fraction f2(3, 7);
+    //f2.print();
+    ////cout << f1 << endl;
+    //
+    //Fraction f3 = f1 + f2; //f1.operator+(f2)
+    //f3.print();
+
+    //(f2 + 3).print();
+    //(3 + f2).print();
 
     /*Student st("Petro", 20);
     st.setAge(2000);
@@ -74,13 +114,13 @@ int main()
 
 
 
-    const int a = 5;
+    /*const int a = 5;
 
     int b1 = 5;
     int b2(5);
     int b3{ 5 };
 
-
+    cout << Student::getCount() << endl;*/
 
 }
 
