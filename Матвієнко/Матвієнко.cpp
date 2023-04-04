@@ -6,6 +6,7 @@
 #include "Student.h"
 #include "Fraction.h"
 #include "Human.h"
+#include "Array.h"
 
 using namespace std;
 
@@ -15,21 +16,71 @@ void func(int& a)
 }
 
 
+template<class T>
+void printArray(T* a, int size)
+{
+    for (size_t i = 0; i < size; i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+
+
+template<class T1, class T2>
+auto Sum(T1 a, T2 b)
+{
+    return a + b;
+}
+
 
 int main()
 {
     SetConsoleOutputCP(1251);
 
+    //////// 04.04.2023 ////////
+
+    srand(time(0));
+
+    Array<char> a(10);
+    a.set();
+    a.print();
+
+
+    /*const int size = 10;
+    int a[size];
+    for (size_t i = 0; i < size; i++)
+    {
+        a[i] = rand() % 20;
+    }
+
+    printArray(a, size);
+
+
+    cout << Sum(2.1, 3) << endl;*/
+
     //////// 28.03.2023 ////////
 
 
-    Human h("Nick", 30);
-    h.print();
+    //Human h("Nick", 30);
+    //h.print();
 
-    FootballPlayer f("Zidan", 40);
-    f.print();
+    //Human* zidan = new FootballPlayer("Zidan", 40);
+    ////zidan->print();
+    ////cout << endl;
 
 
+    //Human* empl = new Employee("Pupkin Vasya", 30, "Google");
+    ////empl->print();
+
+
+    //Human* humans[] = { zidan, empl };
+    //for (size_t i = 0; i < 2; i++)
+    //{
+    //    humans[i]->print();
+    //    humans[i]->whatAreYouDoing();
+    //    cout << endl;
+    //}
 
 
     // .  ::   ?:  sizeof()  
