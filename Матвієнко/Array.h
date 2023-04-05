@@ -4,16 +4,15 @@
 
 using namespace std;
 
-template<class T>
+template<class T, int size = 10>
 class Array
 {
 	T* arr;
-	int size;
+	//int size;
 
 public:
-	Array(int s)
+	Array()
 	{
-		size = s;
 		arr = new T[size];
 	}
 

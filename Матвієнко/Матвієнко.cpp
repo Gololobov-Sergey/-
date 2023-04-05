@@ -7,13 +7,9 @@
 #include "Fraction.h"
 #include "Human.h"
 #include "Array.h"
+#include "Point.h"
 
 using namespace std;
-
-void func(int& a)
-{
-    a++;
-}
 
 
 template<class T>
@@ -33,6 +29,39 @@ auto Sum(T1 a, T2 b)
     return a + b;
 }
 
+template<class T>
+T Min(T a, T b)
+{
+    return (a < b) ? a : b;
+}
+
+
+template<class T>
+void printArray2D(T** arr, int rows, int columns)
+{
+    for (size_t i = 0; i < rows; i++)
+    {
+        for (size_t j = 0; j < columns; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+template<class T, int row, int col>
+void func(T arr[row][col] )
+{
+    for (size_t i = 0; i < row; i++)
+    {
+        for (size_t j = 0; j < col; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 
 int main()
 {
@@ -42,10 +71,48 @@ int main()
 
     srand(time(0));
 
-    Array<char> a(10);
-    a.set();
-    a.print();
 
+    Point p1(3, 5);
+    p1.print();
+    Point p2(2, 3);
+    p2.print();
+
+    Point p3 = p1 + p2;
+    p3.print();
+
+    p3++;
+    p3.print();
+
+    ++p3;
+    p3.print();
+
+    p3 = p3 + 4;
+    p3.print();
+
+    p3 = 3 + p3;
+    p3.print();
+
+
+
+
+    /*int a[2][2] = {1,2,3,4};
+    int b[2][5];
+
+    func<int, 2, 2>(a);
+    func<int, 2, 5>(b);*/
+    
+    
+
+
+    //Array<int, 20> a;
+    //a.set();
+    //a.print();
+
+
+    ////cout << Sum<int, int>(2.1, 3) << endl;
+
+    //cout << Min(2, 3) << endl;
+    //cout << Min(2.2, 3.6) << endl;
 
     /*const int size = 10;
     int a[size];
@@ -57,7 +124,7 @@ int main()
     printArray(a, size);
 
 
-    cout << Sum(2.1, 3) << endl;*/
+    */
 
     //////// 28.03.2023 ////////
 
