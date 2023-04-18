@@ -8,6 +8,7 @@
 #include "Human.h"
 #include "Array.h"
 #include "Point.h"
+#include "Ànimal.h"
 
 using namespace std;
 
@@ -63,35 +64,82 @@ void func(T arr[row][col] )
 }
 
 
+void printAnimal(Animal* animal)
+{
+    cout << "Print from function:" << endl;
+    animal->print();
+    cout << endl;
+}
+
 int main()
 {
     SetConsoleOutputCP(1251);
+    srand(time(0));
+    cout.setf(ios::boolalpha);
+
+    //////// 18.04.2023 ////////
+    /*{
+        Animal* a = new Dog();
+        delete a;
+    }*/
+
+
+    Animal* animal[4] =
+    {
+        new Dog("Spike", 4, true),
+        new Cat("Tom", 5, 50),
+        new Dog("Chucha", 2, false),
+        new Cat("Murka", 1, 5)
+    };
+
+    for (size_t i = 0; i < 4; i++)
+    {
+        animal[i]->print();
+        cout << endl;
+    }
+
+    printAnimal(animal[2]);
+
+    printAnimal(animal[3]);
+
+    //Animal a;
+
 
     //////// 04.04.2023 ////////
 
-    srand(time(0));
+    
 
 
-    Point p1(3, 5);
-    p1.print();
-    Point p2(2, 3);
-    p2.print();
 
-    Point p3 = p1 + p2;
-    p3.print();
+    //Point p1(3, 5);
+    //p1.print();
+    //Point p2(2, 3);
+    //p2.print();
 
-    p3++;
-    p3.print();
+    //Point p3 = p1 + p2;
+    //p3.print();
 
-    ++p3;
-    p3.print();
+    //p3++;
+    //p3.print();
 
-    p3 = p3 + 4;
-    p3.print();
+    //++p3;
+    //p3.print();
 
-    p3 = 3 + p3;
-    p3.print();
+    //p3 = p3 + 4;
+    //p3.print();
 
+    //p3 = 3 + p3;
+    //p3.print();
+
+    //if (p3 > p1)
+    //{
+    //    //
+    //}
+
+    //if (p3 == 8)
+    //{
+
+    //}
 
 
 

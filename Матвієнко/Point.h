@@ -67,6 +67,15 @@ public:
 		return p;
 	}
 
+	bool operator>(Point p)
+	{
+		return x > p.x;
+	}
+
+	bool operator==(int x)
+	{
+		return this->x == x;
+	}
 
 	friend Point operator+(int n, Point p);
 };
