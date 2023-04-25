@@ -85,3 +85,36 @@ Point operator+(int n, Point p)
 {
 	return p + n;
 }
+
+
+
+
+namespace PP
+{
+	class Point 
+	{
+
+		int x;
+
+		int y;
+
+	public:
+
+		Point(int x, int y) :x(x), y(y) {}
+
+		Point() :x(0), y(0) {}
+
+		bool operator<(Point p)
+		{
+			return sqrt(pow(x, 2) + pow(y, 2)) < sqrt(pow(p.x, 2) + pow(p.y, 2));
+		}
+
+		friend ostream& operator<<(ostream& out, const Point& p);
+	};
+
+	ostream& operator<<(ostream& out, const Point& p)
+	{
+		out << "X = " << p.x << ", Y = " << p.y;
+		return out;
+	}
+}

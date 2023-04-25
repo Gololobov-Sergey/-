@@ -9,6 +9,9 @@
 #include "Array.h"
 #include "Point.h"
 #include "Ànimal.h"
+#include "Continent.h"
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -77,6 +80,49 @@ int main()
     srand(time(0));
     cout.setf(ios::boolalpha);
 
+
+    //////// 25.04.2023 ////////
+
+
+
+    Continent c;
+    c.AddCountry("Ukraine");
+    c.AddCountry("USA");
+    c.AddCountry("England");
+    c.AddCountry("France");
+
+    c.EqualsValue("USA");
+
+    c.FinfIndex(2);
+
+    c.Replace(2, 1, 3);
+
+    cout << c.Extract(0, 1, 4) << endl;
+
+    c.printF();
+
+
+    /*vector<PP::Point> v(2);
+
+    v.emplace_back(PP::Point(2, 3));
+
+    v.emplace_back(PP::Point(51, 13));
+
+    v.emplace_back(PP::Point(22, 33));
+
+    for (PP::Point p : v)
+    {
+        cout << p << endl;
+    }
+    cout << endl;
+
+    sort(v.begin(), v.end());
+
+    for (PP::Point p : v)
+    {
+        cout << p << endl;
+    }*/
+
     //////// 18.04.2023 ////////
     /*{
         Animal* a = new Dog();
@@ -84,7 +130,7 @@ int main()
     }*/
 
 
-    Animal* animal[4] =
+    /*Animal* animal[4] =
     {
         new Dog("Spike", 4, true),
         new Cat("Tom", 5, 50),
@@ -100,7 +146,7 @@ int main()
 
     printAnimal(animal[2]);
 
-    printAnimal(animal[3]);
+    printAnimal(animal[3]);*/
 
     //Animal a;
 

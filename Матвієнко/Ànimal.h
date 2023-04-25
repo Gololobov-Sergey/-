@@ -44,7 +44,6 @@ public:
 		Animal::print();
 		cout << "Mouse : " << mouse << endl;
 	}
-
 };
 
 
@@ -66,5 +65,4 @@ public:
 		Animal::print();
 		cout << "Is guard : " << isGuard << endl;
 	}
-
 };
