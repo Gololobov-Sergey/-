@@ -74,6 +74,11 @@ void printAnimal(Animal* animal)
     cout << endl;
 }
 
+bool Pred(int a, int b)
+{
+    return a % 10 < b % 10;
+}
+
 int main()
 {
     SetConsoleOutputCP(1251);
@@ -81,11 +86,120 @@ int main()
     cout.setf(ios::boolalpha);
 
 
+    //////// 09.05.2023 ////////
+
+    vector<int> v1;
+
+    vector<int> v2(5);
+
+    vector<int> v3(5, 12);
+
+    vector<int> v4 = { 12, 03, 2001, 12 };
+
+    for (int v : v4)
+    {
+        cout << v << " ";
+    }
+    cout << endl;
+
+    struct Max
+    {
+        int max = INT_MIN;
+        void operator()(int v) { max = (v > max) ? v : max; }
+    };
+
+    Max m = for_each(v4.begin(), v4.end(), Max());
+    cout << m.max << endl;
+
+
+    auto it = v4.begin();
+    int s = 0;
+    while (it != v4.end())
+    {
+        s += *it;
+        it++;
+    }
+    cout << s << endl;
+
+
+    int count = 0;
+    for (int v : v4)
+    {
+        if (v == 12)
+            count++;
+    }
+    cout << count << endl;
+
+    v4.push_back(1000);
+
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+
+    sort(v4.begin(), v4.end());
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+
+
+
+    sort(v4.begin(), v4.end(), Pred);
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+
+    v4.insert(v4.begin() + 1, 999);
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+
+    /*sort(v4.begin(), v4.end(), greater());
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;*/
+
+
+    sort(v4.begin(), v4.end(), [](int a, int b) {return a > b; });
+    copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
+    cout << endl;
+
+
+    //char str[] = "werwer";
+    //int a[] = { 1,2,3,4 };
+    //cout << a << endl;
+    //cout << str << endl;
+
+    /*string st = "Hello C++";
+    cout << st << endl;
+    cout << st.length() << endl;
+    cout << st.capacity() << endl;
+    cout << st.max_size() << endl;
+
+    cout << st[2] << endl;
+
+    st.pop_back();
+    cout << st << endl;
+
+    st += "ewqrty";
+    cout << st << endl;
+
+
+    cout << (st == "Hello") << endl;
+    cout << (st > "Hello") << endl;
+    cout << (st < "Hello") << endl;
+
+    cout << st.compare("Kello") << endl;
+
+    string st1(st);
+    cout << st1 << endl;
+
+    string st2(st, 5);
+    cout << st2 << endl;
+
+    string st3(10, '#');
+    cout << st3 << endl;*/
+
+
     //////// 25.04.2023 ////////
 
 
 
-    Continent c;
+    /*Continent c;
     c.AddCountry("Ukraine");
     c.AddCountry("USA");
     c.AddCountry("England");
@@ -99,7 +213,7 @@ int main()
 
     cout << c.Extract(0, 1, 4) << endl;
 
-    c.printF();
+    c.printF();*/
 
 
     /*vector<PP::Point> v(2);
