@@ -10,8 +10,11 @@
 #include "Point.h"
 #include "Ànimal.h"
 #include "Continent.h"
+#include "Country.h"
 #include <vector>
 #include <algorithm>
+#include <set>
+#include <map>
 
 using namespace std;
 
@@ -79,6 +82,24 @@ bool Pred(int a, int b)
     return a % 10 < b % 10;
 }
 
+
+//6
+void countSymbol(string str)
+{
+    map<char, int> counts;
+    for (size_t i = 0; i < str.length(); i++)
+    {
+        counts[str[i]]++;
+    }
+
+    for (auto e : counts)
+    {
+        cout << e.first << " - " << e.second << endl;
+    }
+}
+
+
+
 int main()
 {
     SetConsoleOutputCP(1251);
@@ -86,9 +107,98 @@ int main()
     cout.setf(ios::boolalpha);
 
 
+    //////// 17.05.2023 ////////
+
+    //1
+
+    /*set<string> sets;
+    sets.insert("mama");
+    sets.insert("papa");
+    sets.insert("baba");
+    sets.insert("deda");
+
+    cout << sets.contains("baba") << endl;
+    cout << sets.contains("dada") << endl;*/
+
+
+    //2
+
+    /*set<int, greater<int>> sets;
+    sets.insert(10);
+    sets.insert(50);
+    sets.insert(20);
+    sets.insert(5);
+    sets.insert(40);
+    copy(sets.begin(), sets.end(), ostream_iterator<int>(cout, " "));
+
+    cout << endl;
+    int n;
+    cin >> n;
+    copy(next(sets.begin(), n), sets.end(), ostream_iterator<int>(cout, " "));*/
+
+
+
+    //3
+
+    /*set<Country> sets;
+    sets.emplace("Ukraine");
+    sets.emplace("England");
+    sets.emplace("USA");
+
+    for (Country c : sets)
+    {
+        c.info();
+    }*/
+
+
+    //4
+
+    /*set<Country, greater<Country>> sets;
+    sets.emplace("Ukraine");
+    sets.emplace("England");
+    sets.emplace("USA");
+    
+    
+    //5
+    for (Country c : sets)
+    {
+        c.info();
+    }*/
+
+
+    //6
+    //countSymbol("ertghfjee");
+
+
+    //7
+    map<int, string> dictionary;
+    dictionary[1] = "one";
+    dictionary[2] = "two";
+    dictionary[5] = "five";
+    dictionary[6] = "six";
+
+
+    //8
+    dictionary[10] = "ten";
+    dictionary.insert({ 11, "elewen" });
+    dictionary.emplace(12, "twelw");
+
+    //9
+    if (!dictionary.contains(3))
+    {
+        dictionary[3] = "tree";
+    }
+    
+    //10
+    for (auto e : dictionary)
+    {
+        cout << e.first << " - " << e.second << endl;
+    }
+
+
     //////// 09.05.2023 ////////
 
-    vector<int> v1;
+    /*vector<int> v1;
 
     vector<int> v2(5);
 
@@ -149,14 +259,14 @@ int main()
     copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    /*sort(v4.begin(), v4.end(), greater());
+    sort(v4.begin(), v4.end(), greater());
     copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
-    cout << endl;*/
+    cout << endl;
 
 
     sort(v4.begin(), v4.end(), [](int a, int b) {return a > b; });
     copy(v4.begin(), v4.end(), ostream_iterator<int>(cout, " "));
-    cout << endl;
+    cout << endl;*/
 
 
     //char str[] = "werwer";

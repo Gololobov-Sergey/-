@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="Continent.h" />
+    <ClInclude Include="Country.h" />
     <ClInclude Include="Fraction.h" />
     <ClInclude Include="Human.h" />
     <ClInclude Include="Point.h" />
