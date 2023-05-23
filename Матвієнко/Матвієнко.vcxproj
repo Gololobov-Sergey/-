@@ -137,6 +137,7 @@
     <ClInclude Include="Country.h" />
     <ClInclude Include="Fraction.h" />
     <ClInclude Include="Human.h" />
+    <ClInclude Include="MyException.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Ànimal.h" />

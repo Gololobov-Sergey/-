@@ -1,0 +1,1 @@
+May 23 2023 | 17:19:17 | C:\Users\golol\source\repos\Матвієнко\Матвієнко\Матвієнко.cpp | 207 | Arg B = 0

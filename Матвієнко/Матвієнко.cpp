@@ -11,6 +11,7 @@
 #include "Ànimal.h"
 #include "Continent.h"
 #include "Country.h"
+#include "MyException.h"
 #include <vector>
 #include <algorithm>
 #include <set>
@@ -99,6 +100,14 @@ void countSymbol(string str)
 }
 
 
+int f()
+{
+    int a;
+    cin >> a;
+    if (a == 1)
+        return 1;
+}
+
 
 int main()
 {
@@ -106,6 +115,132 @@ int main()
     srand(time(0));
     cout.setf(ios::boolalpha);
 
+    //////// 23.05.2023 ////////
+
+    //try
+    //{
+    //    //throw 4;
+    //    //throw 2.3;
+    //    //throw "Error";
+    //    int a, b;
+    //    cin >> a >> b;
+    //    cout << a / b << endl;
+    //}
+    //catch (int a)
+    //{
+    //    cout << "Error, code i " << a << endl;
+    //}
+    //catch (float a)
+    //{
+    //    cout << "Error, code f " << a << endl;
+    //}
+    //catch (const char* a)
+    //{
+    //    cout << "Error, code str " << a << endl;
+    //}
+    //catch (...)
+    //{
+    //    cout << "Fatal Error" << endl;
+    //}
+
+
+    /*try
+    {
+        cout << "Start" << endl;
+        try
+        {
+            throw "2.5";
+        }
+        catch (int a)
+        {
+            cout << "Error, int code " << a << endl;
+        }
+
+        cout << "End" << endl;
+    }
+    catch (double d)
+    {
+        cout << "Error, double code " << d << endl;
+    }*/
+
+
+
+
+
+    /*try
+    {
+        cout << "Start" << endl;
+
+        try
+        {
+            int a, b;
+            cin >> a >> b;
+            if(b == 0)
+                throw new invalid_argument("Arg B invalid");
+            cout << a / b << endl;
+        }
+        catch (invalid_argument* e)
+        {
+            cout << "Error: " << e->what() << endl;
+        }
+
+        cout << "End" << endl;
+    }
+    catch (exception* d)
+    {
+        cout << "Error: " << d->what() << endl;
+    }*/
+
+
+
+
+
+    /*try
+    {
+        cout << "Start" << endl;
+
+        try
+        {
+            int a, b;
+            cin >> a >> b;
+            if (b == 0)
+                throw MyException(__DATE__, __TIME__, __FILE__, __LINE__, "Arg B = 0");
+            cout << a / b << endl;
+        }
+        catch (MyException e)
+        {
+            e.saveLog();
+        }
+
+        cout << "End" << endl;
+    }
+    catch (exception* d)
+    {
+        cout << "Error: " << d->what() << endl;
+    }*/
+
+    //cout << f() << endl;
+
+    vector<int> v{1, 2, 3};
+    try
+    {
+        int ind;
+        cout << "Enter index: ";
+        cin >> ind;
+        if (ind > v.size())
+            throw invalid_argument("Index out of range");
+        v.insert(v.begin() + ind, 100);
+    }
+    catch (invalid_argument& e)
+    {
+        cout << e.what() << endl;
+    }
+
+    for (int a : v)
+    {
+        cout << a << " ";
+    }
+    cout << endl;
 
     //////// 17.05.2023 ////////
 
@@ -170,30 +305,30 @@ int main()
     //countSymbol("ertghfjee");
 
 
-    //7
-    map<int, string> dictionary;
-    dictionary[1] = "one";
-    dictionary[2] = "two";
-    dictionary[5] = "five";
-    dictionary[6] = "six";
+    ////7
+    //map<int, string> dictionary;
+    //dictionary[1] = "one";
+    //dictionary[2] = "two";
+    //dictionary[5] = "five";
+    //dictionary[6] = "six";
 
 
-    //8
-    dictionary[10] = "ten";
-    dictionary.insert({ 11, "elewen" });
-    dictionary.emplace(12, "twelw");
+    ////8
+    //dictionary[10] = "ten";
+    //dictionary.insert({ 11, "elewen" });
+    //dictionary.emplace(12, "twelw");
 
-    //9
-    if (!dictionary.contains(3))
-    {
-        dictionary[3] = "tree";
-    }
-    
-    //10
-    for (auto e : dictionary)
-    {
-        cout << e.first << " - " << e.second << endl;
-    }
+    ////9
+    //if (!dictionary.contains(3))
+    //{
+    //    dictionary[3] = "tree";
+    //}
+    //
+    ////10
+    //for (auto e : dictionary)
+    //{
+    //    cout << e.first << " - " << e.second << endl;
+    //}
 
 
     //////// 09.05.2023 ////////
