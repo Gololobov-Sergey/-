@@ -16,6 +16,8 @@
 #include <algorithm>
 #include <set>
 #include <map>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -114,6 +116,48 @@ int main()
     SetConsoleOutputCP(1251);
     srand(time(0));
     cout.setf(ios::boolalpha);
+    cout.unsetf(ios::boolalpha);
+    cout << boolalpha;
+
+    //////// 30.05.2023 ////////
+
+
+    /*ofstream out("file.txt");
+    out << "Hello C++" << endl;
+    out.close();*/
+
+    ifstream in("Point.h");
+    if (in.is_open())
+    {
+        string s;
+        while (getline(in, s))
+        {
+            cout << s << endl;
+        }
+    }
+
+
+    //cout << fixed << showpos << showpoint /*<< boolalpha << noboolalpha*/;
+    //cout << setprecision(0) << 123.256 << endl;
+    //cout << setprecision(1) << 123.256 << endl;
+    //cout << setprecision(2) << 123.256 << endl;
+    //cout << setprecision(3) << 123.256 << endl;
+    //cout << setprecision(4) << 123.256 << endl;
+    //cout << setprecision(5) << 123.256 << endl;
+    //cout << setprecision(6) << 123.256 << endl;
+    ////cout << scientific << 123.256 << endl;
+
+
+    /*Country ukr("Ukraine", 452012, "Kyiv");
+    ukr.addCitys("Mykolaiv");
+    ukr.addCitys("Odesa");
+
+    cout << ukr << endl << endl;
+
+    Country usa;
+    cin >> usa;
+    cout << usa << endl;*/
+
 
     //////// 23.05.2023 ////////
 
@@ -221,7 +265,7 @@ int main()
 
     //cout << f() << endl;
 
-    vector<int> v{1, 2, 3};
+    /*vector<int> v{1, 2, 3};
     try
     {
         int ind;
@@ -240,7 +284,7 @@ int main()
     {
         cout << a << " ";
     }
-    cout << endl;
+    cout << endl;*/
 
     //////// 17.05.2023 ////////
 
